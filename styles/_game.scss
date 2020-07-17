@@ -1,0 +1,173 @@
+.game-layer{
+    width: 100%;
+    height: 100%;
+
+    header{
+        width: 100%;
+        height: 10%;
+        background: rgb(0,15, 30);
+        display: flex;
+        flex-direction: row;
+
+        .rounds{
+            margin: 20px 0 0 5%;
+            font-size: 26px;
+        }
+        
+        .menu-link{
+            margin: 20px 10% 0 auto;
+            font-size: 26px;
+            cursor: pointer;
+        }
+    }
+     
+    .game-area{
+        width: 100%;
+        height: 90%;
+        background: $color2;
+
+        .score{
+            font-size: 36px;
+        }
+        
+        .playerScore-container{
+            position: absolute;
+            top: 45%;
+            left: 10%;
+        }
+        
+        .botScore-container{
+            position: absolute;
+            top: 45%;
+            right: 10%;
+        }
+    }
+    
+   
+    
+    .game-icons{
+        width: 50%;
+        margin: 5% auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .fas{
+        font-size: 60px;
+        margin: 0 5%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: 400ms;
+    }
+    
+    .player-icon:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+    
+    .bot-section{
+        width: 100%;
+        height: 50%;
+        @include flexCenter(column);
+
+        .fa-robot{
+            margin-bottom: 5%;
+        }
+    }
+    
+    .cloud-container{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 48%;
+        left: 45%;
+        @include flexCenter(row);
+
+        .fa-cloud{
+            position: relative;
+            transition: 300ms;
+            transform: scale(0);
+        }
+        
+        #cloud1{
+            font-size: 150px;
+            left: 130px;
+            color: #ddd;
+            z-index: 1;
+            animation-duration: 3000ms;
+        }
+        
+        #cloud2{
+            font-size: 130px;
+            left: 20px;
+            color: #ccc;
+            z-index: 1;
+            animation-duration: 2500ms;
+            animation-delay: 500ms;
+        }
+        
+        #cloud3{
+            font-size: 110px;
+            left: -140px;
+            top: -40px;
+            color: #bbb;
+            z-index: 2;
+            animation-duration: 2000ms;
+            animation-delay: 1000ms;
+        }
+    }
+    
+    .player-section{
+        width: 100%;
+        height: 50%;
+        @include flexCenter(column);
+
+        .fa-user{
+            margin-top: 5%;
+        }
+    }
+    
+    .win-text{
+        width: 45%;
+        height: 20%;
+        background: transparent;
+        color: $color4;
+        border: none;
+        position: absolute;
+        top: 55%;
+        left: -150%;
+        transform: translate(-50%, -50%);
+        transition: 300ms;
+        font-size: 28px;
+        z-index: 1;
+    }
+    
+    .finalWin-text{
+        background: $color1;
+        border: 3px solid $color4;
+        border-radius: 4px;
+        animation-name: winTextPulse;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        cursor: pointer;
+    }
+}
+
+@keyframes winTextPulse{
+    0% {transform: scale(1);}
+    8% {transform: scale(1.1);}
+    16% {transform: scale(0.9);}
+    24% {transform: scale(1);}
+    100% {transform: scale(1);}
+}
+
+@keyframes cloudMoving{
+    0% {transform: rotate(0);}
+    25% {transform: rotate(45deg);}
+    50% {transform: rotate(-45deg);}
+    75% {transform: rotate(60deg);}
+    99% {transform: rotate(-60deg);}
+    100% {display: none;}
+}
+

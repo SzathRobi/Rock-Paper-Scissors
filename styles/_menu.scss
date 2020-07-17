@@ -1,0 +1,172 @@
+.menu-section{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    background: $color1;
+    transition: 1000ms;
+    @include flexCenter(column);
+
+    .menu-topSection{
+        top: 0;
+
+        .menu-exit{
+            width: 45px;
+            height: 45px;
+            transform: rotate(45deg);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            cursor: pointer;
+
+            .menu-x{
+                width: 140%;
+                height: 5px;
+                background: $color4;
+                border-radius: 16px;
+                position: absolute;
+                transition: 500ms;
+            
+                #menuX1{
+                    transform: rotate(90deg);
+                    animation-name: none;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                }
+            }
+            
+        }
+
+        .new-gameBtn{
+            position: relative;
+            top: 0;
+        }
+
+        .roundsBtn{
+            overflow: hidden;
+           
+            .rounds-top{
+                height: 60px;
+                bottom: 0;
+                border-bottom: none;
+        
+                .round-topText{
+                    position: relative;
+                    bottom: -29px;
+                    
+                }
+            }
+        
+            .rounds-bottom{
+                height: 60px;
+                top: 0;
+                border-top: none;
+                
+                .rounds-bottomText{
+                    position: relative;
+                    bottom: 29px;
+                }
+            }
+        }
+    }
+    
+    .menu-bottomSection{
+        top: 50%;
+
+
+    }
+
+    .menu-btn{
+        width: 40%;
+        height: 110px;
+        border: 1px solid $color4;
+        position: absolute;
+        z-index: 6;
+        background: $color1;
+        transition: 800ms;
+        @include flexCenter(row);
+    }
+    
+    .menu-btn:hover{
+        cursor: pointer;
+    }
+
+    .rounds-secondary{
+        width: 25%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 37.5%;
+        background: $color2;
+        z-index: 5;
+        border: 1px solid $color4;
+        transition: 1s;
+        opacity: 0;
+        @include flexCenter(row);
+
+        .fa-caret-left, .fa-caret-left{
+            transition: 500ms;
+            animation-duration: 500ms;
+            animation-name: clickAnimation;
+        }
+        
+        .fa-caret-left:hover, .fa-caret-right:hover{
+            cursor: pointer;
+        }
+        
+        .roundsNum{
+            margin: 0 15%;
+        }
+    }
+}
+
+
+.characters{
+    transition: 1s;
+    position: relative;
+    top: 0;
+
+    .characters-secondary{
+        width: 10%;
+        height: 40px;
+        position: absolute;
+        bottom: 45%;
+        background: $color2;
+        transition: 800ms;
+        @include flexCenter(row);
+        
+        .choosableCharacters{
+            font-size: 5px;
+            padding: 4%;
+            border-radius: 8px;
+            margin: 1%;
+        }
+        
+        .hoveredCharacters:hover{
+            color: $color2;
+            background: $color4;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+@keyframes menuXanimation{
+    0% {transform: rotate(90deg)}
+    50% {transform: rotate(-385deg)}
+    80% {transform: rotate(-30deg)}
+    100% {transform: rotate(-270deg)}
+}
+
+@keyframes clickAnimation{
+    0%{transform: scale(1);}
+    0%{transform: scale(0.8);}
+    0%{transform: scale(1);}
+}

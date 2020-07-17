@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/6d59e6f2e7.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./styles/style.css">
+	
+	<body>
+	
+		<div class="menu-section menu-topSection" id="menuTopSection">
+			<div class="menu-exit" id="menuExit">
+				<span class="menu-x" id="menuX1"></span>
+				<span class="menu-x" id="menuX2"></span>
+			</div>
+			
+			<div class="menu-btn new-gameBtn" id="newGameBtn">
+				<h1>New Game</h1>
+			</div>
+			<div class="menu-btn roundsBtn rounds-top" id="roundTop">
+				<h1 class="round-topText">Rounds</h1>
+			</div>
+		</div>
+		
+		<div class="menu-section menu-bottomSection" id="menuBottomSection">
+			<div class="menu-btn roundsBtn rounds-bottom" id="roundBottom">
+				<h1 class="rounds-bottomText">Rounds</h1>
+			</div>
+			<div class="menu-btn characters" id="characters">
+				<h1>Choose Character</h1>
+			</div>
+			
+			<div class="rounds-secondary" id="roundsSecondary">
+				<i class="fas fa-caret-left" id="roundArrowLeft"></i>
+				<h1 class="roundsNum" id="roundNum">1</h1>
+				<i class="fas fa-caret-right" id="roundArrowRight"></i>
+			</div>
+			
+			<div class="characters-secondary" id="charactersSecondary">
+				<i class="hoveredCharacters choosableCharacters fas fa-user-secret"></i>
+				<i class="hoveredCharacters choosableCharacters fas fa-user-ninja"></i>
+				<i class="hoveredCharacters choosableCharacters fas fa-user-astronaut"></i>
+				<i class="hoveredCharacters choosableCharacters fas fa-user-nurse"></i>
+				<i class="hoveredCharacters choosableCharacters fas fa-user-graduate"></i>
+			</div>
+		</div>
+		
+		
+		<div class="game-layer">
+		
+			<header id="gameHeader">
+				<h3 class="rounds">Rounds:<span class="actual-round" id="actualRound">0</span>/<span class="total-round" id="totalRound">5</span></h3>
+				<h3 class="menu-link" id="menuLink">Menu</h3>
+			</header>
+			
+			<div class="game-area">
+				<div class="playerScore-container">
+					<h3 class="score">Player:<span id="playerScore">0</span></h3>
+				</div>
+				<div class="botScore-container">
+					<h3 class="score">Bot:<span id="botScore">0</span></h3>
+				</div>
+				
+				<div class="bot-section" id="botSection">
+					<div>
+						<i class="fas fa-robot"></i>
+					</div>
+					<div class="game-icons">
+						<i class="bot-icon fas fa-hand-scissors" id="botRock"></i>
+						<i class="bot-icon fas fa-hand-paper" id="botPaper"></i>
+						<i class="bot-icon fas fa-hand-rock" id="botScissors"></i>
+					</div>
+				</div>
+				
+				<div class="cloud-container">
+					<i class="fas fa-cloud" id="cloud1"></i>
+					<i class="fas fa-cloud" id="cloud2"></i>
+					<i class="fas fa-cloud" id="cloud3"></i>
+				</div>
+				
+				<button class="win-text" id="winText"></button>
+
+				<div class="player-section" id="playerSection">
+					<div class="game-icons">
+						<i class="player-icon fas fa-hand-rock" id="playerRock"></i>
+						<i class="player-icon fas fa-hand-paper" id="playerPaper"></i>
+						<i class="player-icon fas fa-hand-scissors" id="playerScissors"></i>
+					</div>
+					
+					<div>
+						<i class="fas fa-user"></i>
+					</div>	
+				</div>
+				
+			</div>
+		</div>
+		
+	<script src="./js/menu.js"></script>
+	<script src="./js/game.js"></script>
+	</body>
+ </head>
+</html>
